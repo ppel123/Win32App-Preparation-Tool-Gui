@@ -33,3 +33,6 @@ The user just runs the **execute_process.bat** file and presses the button "Crea
 #### Last Step
 Upload the generated .intunewin file to Intune.
 Ready!
+
+
+###### Please provide improvement recommendation, in order to make this tool as better as possible!!!
