@@ -5,7 +5,7 @@ This tool is based on and uses Microsoft's [Microsoft Win32 Content Prep Tool](h
 ## GUI
 While scrolling and searching information in different Intune forums and groups, I saw several questions and requests about a Win32 Preparation GUI tool, with which users with little or no command prompt experience can prepare their applications easily for uploading to Intune.  
 Having that in mind I created this repo, where I uploaded a very very simple GUI that can prepare the application just by pressing a button.  
-I created this GUI in Python (personal preference) and in Powershell (I recommend using this one because it is independent of any additional installation). Below you can find a description of the way this application is functioning. 
+I created this GUI initially in Python (personal preference) and in Powershell (I recommend using this one because it is independent of any additional installation). Below you can find a description of the way this application is functioning. 
 
 ## How to use?
 First let's see the way the application is structured and how the user can run it.
