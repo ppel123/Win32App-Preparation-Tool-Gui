@@ -2,10 +2,22 @@
 Add-Type -AssemblyName System.Windows.Forms
 
 function RunContentPrepTool {
-    $exe_name = (Get-ChildItem -Path ".\App").Name
-    Write-Host $exe_name
-    Write-Host "-c .\App -s $exe_name -o .\"
-    Start-Process .\IntuneWinAppUtil.exe -Wait -ArgumentList "-c .\App -s $exe_name -o .\"
+    $content = Get-ChildItem -Path ".\App"
+    $content_name = $content.Name
+    $content_attributes = $content.Attributes.ToString()
+
+    if ($content_name.EndsWith('.exe') -or $content_name.EndsWith('.msi')){
+        Write-Host $content_name
+        Write-Host "-c .\App -s $content_name -o .\"
+        Start-Process .\IntuneWinAppUtil.exe -Wait -ArgumentList "-c .\App -s $content_name -o .\"
+    }
+    elseif (-not($content_name.EndsWith('.exe') -or $content_name.EndsWith('.msi')) -and ($content_attributes).Contains("Directory")){
+        Write-Host $content_name
+        Write-Host "We have a folder"
+        $inside_folder_content_exe = Get-ChildItem -Path ".\App\$content_name" -Filter "*.exe" | Where-Object { $_.Name.ToUpper() -notlike 'serviceui.*'.ToUpper() }
+        Start-Process .\IntuneWinAppUtil.exe -Wait -ArgumentList "-c .\App\$content_name -s $inside_folder_content_exe -o .\"
+    }
+    
     [void]$NewForm.Close()
 }
 
