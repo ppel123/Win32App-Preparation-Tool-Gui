@@ -23,7 +23,7 @@ function RunContentPrepTool {
 
 # Create a new form
 $NewForm = New-Object System.Windows.Forms.Form
-$NewForm.ClientSize = '600,200'
+$NewForm.ClientSize = '1000,300'
 $NewForm.text = "Win32 Preparation Tool GUI"
 $NewForm.BackColor = "#ffffff"
 $NewForm.AutoScale = $false
@@ -39,7 +39,7 @@ $title.Font = 'Microsoft Sans Serif,13'
 # Create the 1st option available
 $option1 = New-Object System.Windows.Forms.Label
 $option1.text = "
-Add an application into the App folder, 
+Add an application (currently supporting a single .exe file) into the App folder, 
 press the below button and let the application create everything for you"
 $option1.AutoSize = $true
 $option1.location = New-Object System.Drawing.point(20,50)
@@ -48,8 +48,8 @@ $option1.Font = 'Microsoft Sans Serif,10'
 $option1Btn = New-Object System.Windows.Forms.Button
 $option1Btn.BackColor = "#a4ba67"
 $option1Btn.text = "Create Win32 App"
-$option1Btn.Width = 180
-$option1Btn.Height = 30
+$option1Btn.Width = 250
+$option1Btn.Height = 40
 $option1Btn.Location = New-Object System.Drawing.Point(50,150)
 $option1Btn.Font = 'Microsoft Sans Serif,10'
 $option1Btn.ForeColor = "#ffffff"
