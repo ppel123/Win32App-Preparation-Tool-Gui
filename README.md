@@ -34,6 +34,10 @@ Run the tool in one of the following ways (run elevated / as Administrator where
 - Or execute `execute_process.bat` as Administrator (right-click → "Run as administrator").
 
 Then use the GUI:
+
+<img width="1017" height="502" alt="win32app_preparation_tool_gui" src="https://github.com/user-attachments/assets/c5e807b2-22a7-4a75-82d2-c8571d2facbd" />
+
+
 1. Click "Browse..." next to Source folder and select the folder that contains the installer and related files.
 2. Click "Browse..." next to Setup file and select the setup .exe or .msi file.
 3. Confirm or change the Output folder (defaults to the script folder).
@@ -54,4 +58,5 @@ All operations are appended to `win32_prep_tool_gui.log` in the script folder wi
 ## License / attribution
 This GUI is a convenience wrapper that calls Microsoft's Win32 Content Prep Tool. The underlying packaging functionality is provided by Microsoft; please consult their repository and documentation for licensing and further details:
 - https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool
+
 - https://docs.microsoft.com/en-us/mem/intune/apps/apps-win32-prepare
