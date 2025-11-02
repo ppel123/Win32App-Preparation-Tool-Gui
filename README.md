@@ -35,8 +35,7 @@ Run the tool in one of the following ways (run elevated / as Administrator where
 
 Then use the GUI:
 
-<img width="1017" height="502" alt="win32app_preparation_tool_gui" src="https://github.com/user-attachments/assets/c5e807b2-22a7-4a75-82d2-c8571d2facbd" />
-
+<img width="2020" height="1011" alt="win32app_preparation_tool_gui" src="https://github.com/user-attachments/assets/ad3e863b-eee7-4f52-be6e-0e2196f34cb8" />
 
 1. Click "Browse..." next to Source folder and select the folder that contains the installer and related files.
 2. Click "Browse..." next to Setup file and select the setup .exe or .msi file.
@@ -60,3 +59,4 @@ This GUI is a convenience wrapper that calls Microsoft's Win32 Content Prep Tool
 - https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool
 
 - https://docs.microsoft.com/en-us/mem/intune/apps/apps-win32-prepare
+
